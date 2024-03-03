@@ -1,0 +1,19 @@
+﻿<Window x:Class="Offline_mode.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Offline_mode"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <DockPanel>
+        <ComboBox Name="box" DockPanel.Dock="Top">
+            <ComboBoxItem Content="artists"></ComboBoxItem>
+            <ComboBoxItem Content="songs"></ComboBoxItem>
+            <ComboBoxItem Content="song_artists"></ComboBoxItem>
+        </ComboBox>
+        <DataGrid x:Name="grid" ItemsSource="{Binding}" DockPanel.Dock="Top"></DataGrid>
+        <Button Name="conservation" DockPanel.Dock="Top" Height="30" Width="300" Click="conservation_Click">сохранить</Button>
+        <Button Name="updating" DockPanel.Dock="Top" Height="30" Width="300" Click="updating_Click">выбрать таблицу из списка</Button>
+    </DockPanel>
+</Window>
